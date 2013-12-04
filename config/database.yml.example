@@ -37,3 +37,27 @@ production:
   username: root
   password:
   socket: /tmp/mysql.sock
+
+#
+# If need you can do something like this:
+#
+# settings: &settings
+#   pool:     5
+#   username: root
+#   encoding: utf8
+#   adapter:  mysql2
+#   host:     localhost
+#   socket:   /tmp/mysql.sock
+#
+# development:
+#   <<: *settings
+#   database: FocusGTD_development
+#
+# test:
+#   <<: *settings
+#   database: FocusGTD_test
+#
+# production:
+#   <<: *settings
+#   database: FocusGTD_production:
+# 
