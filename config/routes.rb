@@ -1,14 +1,14 @@
 FocusGTD::Application.routes.draw do
 
-  devise_for :users, controllers: {
-    sessions:      'authentication/sessions',
-    registrations: 'authentication/registrations'
-  }
-
+  devise_for :users, skip: [:sessions, :registrations]
+  
   devise_scope :user do
-    get 'sign_in',  to: 'authentication/sessions#new'
-    get 'sign_up',  to: 'authentication/registrations#new'
-    get 'sign_out', to: 'authentication/sessions#destroy'
+    get  'sign_in',  to: 'authentication/sessions#new',         as: :new_user_session
+    post 'sign_in',  to: 'authentication/sessions#create',      as: :user_session
+    get  'sign_out', to: 'authentication/sessions#destroy',     as: :destroy_user_session
+
+    get  'sign_up',  to: 'authentication/registrations#new',    as: :new_user_registration
+    post 'sign_up',  to: 'authentication/registrations#create', as: :user_registration
   end
 
 end
