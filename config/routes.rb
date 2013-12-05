@@ -1,5 +1,7 @@
 FocusGTD::Application.routes.draw do
 
+  root 'dashboard#show'
+
   devise_for :users, skip: [:sessions, :registrations]
   
   devise_scope :user do
