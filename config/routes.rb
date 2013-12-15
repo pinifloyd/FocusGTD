@@ -1,9 +1,9 @@
 FocusGTD::Application.routes.draw do
 
-  root 'dashboard#show'
+  root to: 'content#home'
 
   devise_for :users, skip: [:sessions, :registrations]
-  
+
   devise_scope :user do
     get  'sign_in',  to: 'authentication/sessions#new',         as: :new_user_session
     post 'sign_in',  to: 'authentication/sessions#create',      as: :user_session
@@ -12,5 +12,7 @@ FocusGTD::Application.routes.draw do
     get  'sign_up',  to: 'authentication/registrations#new',    as: :new_user_registration
     post 'sign_up',  to: 'authentication/registrations#create', as: :user_registration
   end
+
+  resource :dashboard, only: :show
 
 end

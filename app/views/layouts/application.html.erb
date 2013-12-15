@@ -1,18 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset='utf-8' />
 
-    <title><%= content_for?(:title) ? yield(:title) : "FocusGTD" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : 'FocusGTD' %></title>
 
-    <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "vendor/modernizr", "application" %>
+    <%= stylesheet_link_tag 'application' %>
 
     <%= csrf_meta_tags %>
   </head>
 
   <body>
     <%= yield %>
+
+    <div class='javascripts'>
+      <% if content_for? :javascript_before %>
+        <%= yield :javascript_before %>
+      <% end %>
+
+      <%= javascript_include_tag 'application' %>
+
+      <% if content_for? :javascript_after %>
+        <%= yield :javascript_after %>
+      <% end %>
+    </div>
   </body>
 </html>

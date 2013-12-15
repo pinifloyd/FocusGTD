@@ -12,9 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
+//
+//  Foundation v5
+//= require vendor/modernizr
 //= require foundation
-//= require_tree .
 
 $(function(){
-  $(document).foundation();
+  $(document).foundation({
+    orbit: { resume_on_mouseout: true }
+  });
 });
