@@ -10,7 +10,8 @@ gem 'jquery-rails',     '3.0.4'
 gem 'devise',           '3.2.2'
 
 group :development do
-  gem 'thin', '1.6.1'
+  gem 'thin',          '1.6.1'
+  gem 'better_errors', '1.1.0'
 end
 
 group :doc do
