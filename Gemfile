@@ -11,7 +11,8 @@ gem 'foundation-rails', '5.0.2.0'
 gem 'devise',           '3.2.2'
 
 group :development do
-  gem 'thin', '1.6.1'
+  gem 'thin',          '1.6.1'
+  gem 'better_errors', '1.1.0'
 end
 
 group :doc do
