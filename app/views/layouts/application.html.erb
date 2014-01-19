@@ -3,26 +3,19 @@
   <head>
     <meta charset='utf-8' />
 
-    <title><%= content_for?(:title) ? yield(:title) : 'FocusGTD' %></title>
+    <title><%= page_title %></title>
 
-    <%= stylesheet_link_tag 'application' %>
+    <%= render partial: 'shared/stylesheets' %>
 
     <%= csrf_meta_tags %>
   </head>
 
   <body>
+    <%= render partial: 'shared/top_bar' %>
+
     <%= yield %>
 
-    <div class='javascripts'>
-      <% if content_for? :javascript_before %>
-        <%= yield :javascript_before %>
-      <% end %>
-
-      <%= javascript_include_tag 'application' %>
-
-      <% if content_for? :javascript_after %>
-        <%= yield :javascript_after %>
-      <% end %>
-    </div>
+    <%= render partial: 'shared/footer' %>
+    <%= render partial: 'shared/javascripts' %>
   </body>
 </html>

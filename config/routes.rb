@@ -13,6 +13,8 @@ FocusGTD::Application.routes.draw do
     post 'sign_up',  to: 'authentication/registrations#create', as: :user_registration
   end
 
+  get '/about' => 'content#about', as: :about
+
   resource :dashboard, only: :show
 
 end

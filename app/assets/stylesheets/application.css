@@ -10,72 +10,25 @@
  *
  *= require_self
  *= require foundation_and_overrides
- *= require_tree .
  */
 
-footer.bottom {
-  background: #333;
-  padding: 24px 0 10px;
-  margin-top: 20px;
-}
-
-footer.bottom ul.social {
-  display: block;
-  float: right;
-  margin-bottom: 8px;
-}
-
-footer.bottom ul.social li:first-child {
-  margin-left: 0;
-}
-
-footer.bottom ul.social li {
-  list-style: none;
-  display: block;
-  float: left;
-  margin-left: 10px;
-}
-
-footer.bottom ul.social li a.twitter {
-  background-position: center 0;
-}
-
-footer.bottom ul.social li a.facebook {
-  background-position: center -200px;
-}
-
-footer.bottom ul.social li a.mail {
-  background-position: center -400px;
-}
-
-footer.bottom ul.social li a {
-  display: block;
-  height: 50px;
-  width: 50px;
-  background: url(social-icons.png) no-repeat center 0;
-}
-
-footer.bottom ul.social li a:hover {
-  opacity: 0.8;
-}
-
-footer.bottom a.logo {
+footer a.logo {
   color: #858585;
   padding: 5px 0 0 0;
   font-size: 1em;
   display: inline-block;
 }
 
-footer.bottom a.logo:hover {
+footer a.logo:hover {
   color: #777;
 }
 
-footer.bottom ul.links {
+footer ul.links {
   margin: -4px;
   display: inline-block;
 }
 
-footer.bottom ul.links li {
+footer ul.links li {
   display: block;
   float: left;
   margin-left: 6px;
@@ -84,16 +37,16 @@ footer.bottom ul.links li {
   font-size: 0.75em;
 }
 
-footer.bottom ul.links li a {
+footer ul.links li a {
   color: #666;
   padding: 3px 6px;
 }
 
-footer.bottom ul.links li a:hover {
+footer ul.links li a:hover {
   color: #777;
 }
 
-footer.bottom p.copyright {
+footer p.copyright {
   margin: 12px 0 0;
   font-size: 0.75em;
   color: #666;
