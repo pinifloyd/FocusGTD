@@ -1,0 +1,18 @@
+footer.page-footer
+  div.row
+    div.large-4.large-push-8.columns
+      ul.social-links
+        li = link_to '', '#', class: 'twitter'
+        li = link_to '', '#', class: 'facebook'
+        li = link_to '', '#', class: 'mail'
+
+    div.large-8.large-pull-4.columns
+      = link_to 'FocusGTD', root_path, class: 'logo'
+
+      ul.main-links
+        li = link_to 'About', about_path
+        li = link_to 'Blog', '#'
+        li = link_to 'Contact', '#'
+
+      p.copyright
+        | © Copyright no one at all. Go to town.
