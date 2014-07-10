@@ -1,63 +1,19 @@
-# MySQL.  Versions 4.1 and 5.0 are recommended.
-#
-# Install the MYSQL driver
-#   gem install mysql2
-#
-# Ensure the MySQL gem is defined in your Gemfile
-#   gem 'mysql2'
-#
-# And be sure to use new-style password hashing:
-#   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
-development:
-  adapter: mysql2
-  encoding: utf8
-  database: FocusGTD_development
-  pool: 5
+settings: &settings
+  pool:     5
   username: root
   password:
-  socket: /tmp/mysql.sock
+  encoding: utf8
+  adapter:  mysql2
+  host:     localhost
 
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
+development:
+  <<: *settings
+  database: FocusGTD_development
+
 test:
-  adapter: mysql2
-  encoding: utf8
+  <<: *settings
   database: FocusGTD_test
-  pool: 5
-  username: root
-  password:
-  socket: /tmp/mysql.sock
 
 production:
-  adapter: mysql2
-  encoding: utf8
+  <<: *settings
   database: FocusGTD_production
-  pool: 5
-  username: root
-  password:
-  socket: /tmp/mysql.sock
-
-#
-# If need you can do something like this:
-#
-# settings: &settings
-#   pool:     5
-#   username: root
-#   encoding: utf8
-#   adapter:  mysql2
-#   host:     localhost
-#   socket:   /tmp/mysql.sock
-#
-# development:
-#   <<: *settings
-#   database: FocusGTD_development
-#
-# test:
-#   <<: *settings
-#   database: FocusGTD_test
-#
-# production:
-#   <<: *settings
-#   database: FocusGTD_production:
-# 

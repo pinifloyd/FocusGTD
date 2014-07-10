@@ -16,4 +16,5 @@
 /tmp
 
 # My Ignores
+.DS_Store
 config/database.yml
