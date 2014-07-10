@@ -1,0 +1,29 @@
+<br /><br />
+<%= link_to 'New Project', new_project_path %>
+
+<h3>List of Projects:</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>Name</th>
+      <th>Desc</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= project.id %></td>
+        <td><%= project.name %></td>
+        <td><%= project.description %></td>
+        <td>
+          <%= link_to 'Edit', edit_project_path(project) %>
+          <%= link_to 'Show', project_path(project) %>
+          <%= link_to 'Delete', project_path(project), method: :delete %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
