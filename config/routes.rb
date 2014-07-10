@@ -1,4 +1,6 @@
 FocusGTD::Application.routes.draw do
+  
+  root 'content#home'
 
   devise_for :users, skip: [:sessions, :registrations]
   
