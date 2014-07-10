@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'annotate',         '2.6.5'
 gem 'rails',            '4.0.2'
 gem 'mysql2',           '0.3.14'
 gem 'sass-rails',       '~> 4.0.0'
