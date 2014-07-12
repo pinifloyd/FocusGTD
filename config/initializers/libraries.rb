@@ -1,1 +1,2 @@
-require 'controllers/set_locale'
+require 'controllers/utils'
+require 'controllers/errors'

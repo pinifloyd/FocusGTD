@@ -1,0 +1,1 @@
+require 'controllers/utils/set_locale'
