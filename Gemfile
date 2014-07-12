@@ -1,19 +1,20 @@
 source 'https://rubygems.org'
 
-gem 'annotate',         '2.6.5'
-gem 'rails',            '4.0.2'
-gem 'mysql2',           '0.3.14'
-gem 'sass-rails',       '~> 4.0.0'
-gem 'slim',             '2.0.2'
-gem 'uglifier',         '>= 1.3.0'
-gem 'coffee-rails',     '~> 4.0.0'
-gem 'jbuilder',         '~> 1.2'
-gem 'jquery-rails',     '3.0.4'
-gem 'devise',           '3.2.2'
+gem 'annotate'
+gem 'coffee-rails'
+gem 'devise'
+gem 'jbuilder'
+gem 'jquery-rails'
+gem 'rails'
+gem 'sass-rails'
+gem 'slim'
+gem 'uglifier'
 
 group :development do
-  gem 'thin',          '1.6.1'
-  gem 'better_errors', '1.1.0'
+  gem 'better_errors'
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'thin'
 end
 
 group :doc do
