@@ -20,4 +20,20 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  sign_up:  'Sign Up'
+  sign_in:  'Sign In'
+  sign_out: 'Sign Out'
+
+  password:              'Password'
+  password_confirmation: 'Password Confirmation'
+
+  id:          'ID'
+  email:       'Email'
+  name:        'Name'
+  description: 'Description'
+  
+  edit:   'Edit'
+  show:   'Show'
+  delete: 'Delete'
+  
+  # projects: 'Projects'

@@ -1,14 +1,14 @@
 <br /><br />
-<%= link_to 'New Project', new_project_path %>
+<%= link_to t(:new_project), new_project_path %>
 
-<h3>List of Projects:</h3>
+<h3><%= t(:projects) %></h3>
 
 <table>
   <thead>
     <tr>
-      <th>id</th>
-      <th>Name</th>
-      <th>Desc</th>
+      <th><%= t(:id) %></th>
+      <th><%= t(:name) %></th>
+      <th><%= t(:description) %></th>
       <th></th>
     </tr>
   </thead>
@@ -19,9 +19,9 @@
         <td><%= project.name %></td>
         <td><%= project.description %></td>
         <td>
-          <%= link_to 'Edit', edit_project_path(project) %>
-          <%= link_to 'Show', project_path(project) %>
-          <%= link_to 'Delete', project_path(project), method: :delete %>
+          <%= link_to t(:edit), edit_project_path(project) %>
+          <%= link_to t(:show), project_path(project) %>
+          <%= link_to t(:delete), project_path(project), method: :delete %>
         </td>
       </tr>
     <% end %>

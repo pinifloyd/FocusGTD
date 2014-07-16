@@ -1,8 +1,6 @@
 FocusGTD::Application.routes.draw do
-  
-  get  '/:locale' => 'content#home'
-  
-  scope '(:locale)', locale: /en/ do
+
+  scope '(:locale)', locale: /en|ru/ do
     root 'content#home'
 
     devise_for :users, skip: [:sessions, :registrations]
