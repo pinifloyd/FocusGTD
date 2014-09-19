@@ -11,7 +11,10 @@ module Controllers
     private
 
       def set_locale
-        I18n.locale = params[:locale] || I18n.default_locale
+        locale       = params[:locale].try(:to_sym)
+        is_available = I18n.available_locales.include?(locale)
+
+        I18n.locale = is_available ? locale : I18n.default_locale
       end
 
       def default_url_options(options = {})
