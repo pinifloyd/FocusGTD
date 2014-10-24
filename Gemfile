@@ -16,6 +16,11 @@ group :development do
   gem 'thin'
 end
 
+group :test do
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
+end
+
 group :doc do
   gem 'sdoc', require: false
 end

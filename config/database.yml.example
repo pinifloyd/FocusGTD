@@ -6,14 +6,17 @@ settings: &settings
   adapter:  mysql2
   host:     localhost
 
+production:
+  <<: *settings
+  database: FocusGTD_production
+
 development:
   <<: *settings
   database: FocusGTD_development
 
-test:
+test: &test
   <<: *settings
   database: FocusGTD_test
 
-production:
-  <<: *settings
-  database: FocusGTD_production
+cucumber:
+  <<: *test
